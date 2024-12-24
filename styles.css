@@ -1,0 +1,130 @@
+html, body, #viewDiv {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 控制面板样式 */
+#controls {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    z-index: 10;
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* 增加间隔 */
+    width: 420px; /* 设置统一宽度 */
+}
+
+/* 输入框样式 */
+#flightInput, #dateInput {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* 输入框聚焦时样式 */
+#flightInput:focus, #dateInput:focus {
+    border-color: #4e90e8;
+    box-shadow: 0 0 8px rgba(78, 144, 232, 0.4);
+}
+
+/* 按钮样式 */
+button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+}
+
+/* 查询航班按钮样式 */
+#searchButton {
+    background-color: hwb(188 32% 37%);
+    color: white;
+}
+
+/* 流量预测按钮样式 */
+#predictButton {
+    background-color: hwb(188 32% 37%);
+    color: white;
+}
+
+/* 按钮悬浮时的样式 */
+button:hover {
+    opacity: 0.8;
+}
+
+/* 流量预测结果输出区域样式 */
+#flowResultContainer {
+    margin-top: 0px;    /* 上边距，确保与上方元素有合适的间距 */
+    margin-left: 0px;   /* 左移，适当调整值让结果框更多左移 */
+    padding: 15px;
+    border: 1px solid #cccccc10;
+    border-radius: 8px;
+    background-color: #f9f9f920;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 380px;
+    width: 100%;
+    text-align: left;    /* 文本左对齐 */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 结果文本样式 */
+#flowResultText {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    padding: 15px 20px;  /* 增加左右内边距，使文本不挨着边框 */
+    border-radius: 5px;
+    background-color: #ffffff01;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    text-align: left;    /* 使文本左对齐 */
+    border: 1px solid #ddd;  /* 轻微的边框，增加视觉层次感 */
+    margin-left: 0px;  /* 将文本框内左侧的内容再向左移一点 */
+}
+
+/* 提示文本样式 */
+#flowResultText p {
+    font-size: 14px;
+    color: #888;
+    margin-left: 10px;  /* 适当左移提示文本 */
+}
+
+
+/* 流量预测结果输出区域的标题样式 */
+#flowResultContainer h2 {
+    font-size: 8px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 新增的类，用于居中显示 */
+.centered-container {
+    position: fixed; /* 固定定位，相对于视口定位 */
+    top: 50%; /* 距离顶部50% */
+    left: 65%; /* 距离左侧50% */
+    transform: translate(-50%, -50%); /* 平移50%，实现水平垂直居中 */
+    width: 1000px; /* 设置合适的宽度 */
+    height: 800px; /* 设置合适的高度 */
+    background: rgba(198, 199, 200, 0.741); /* 背景颜色 */
+    padding: 15px;
+    border: 1px solid #ccccccbb;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    display: none; /* 默认不显示 */
+    z-index: 100; /* 确保在最上层 */
+}
